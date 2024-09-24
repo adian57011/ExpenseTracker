@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker.csproj", "{CCE91C77-E5E4-4485-83F2-353AA112DCB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker.csproj", "{CCE91C77-E5E4-4485-83F2-353AA112DCB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{2F3B432B-098C-43C1-BE72-70BE2AB127E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{2F3B432B-098C-43C1-BE72-70BE2AB127E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

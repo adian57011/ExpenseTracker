@@ -1,4 +1,5 @@
 using DAL;
+using ExpenseTracker.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,9 @@ builder.Services.AddControllersWithViews();
 // Entity Framework Setup //
 builder.Services.AddDbContext<ETDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Repository Setup
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 
 var app = builder.Build();
