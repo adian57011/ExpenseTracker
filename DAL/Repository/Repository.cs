@@ -4,8 +4,8 @@ namespace DAL.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly DbContext _context;
-        private readonly DbSet<T> _dbset;
+        public readonly DbContext _context;
+        public readonly DbSet<T> _dbset;
 
         public Repository(DbContext context)
         {
