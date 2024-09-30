@@ -7,10 +7,10 @@ namespace DAL.Model
         [Key]
         public int Id { get; set; }
         [Required]
-        public string? Username { get; set; }
+        public string Username { get; set; }
         [Required]
-        public string? Password { get; set; }
-        public string? HashedPassword { get; set; }
+        public string Password { get; set; }
+        public string HashedPassword { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime UpdateOn { get; set; }
     }

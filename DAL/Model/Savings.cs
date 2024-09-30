@@ -10,7 +10,7 @@ namespace DAL.Model
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
         public double Amount { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }

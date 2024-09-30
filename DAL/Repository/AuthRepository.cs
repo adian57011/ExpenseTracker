@@ -53,10 +53,7 @@ namespace DAL.Repository
             {
                 //1. Check if the user exists!//
 
-                bool check = _dbset.Any(x => x.Username == user.Username || x.Id == user.Id);
-
-                if (check)
-                    return false; //user already exists!
+                //bool check = _dbset.Any(x => x.Username == user.Username || x.Id == user.Id);
 
                 //2.Create a user
                return await this.Create(user);
