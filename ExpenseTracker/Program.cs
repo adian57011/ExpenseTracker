@@ -12,6 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ETDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
 //Session Setup//
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -20,6 +21,7 @@ builder.Services.AddSession(options => {
 
 });
 
+
 //Repository Setup
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IAuthRepository), typeof(AuthRepository));
@@ -27,6 +29,7 @@ builder.Services.AddScoped(typeof(IAuthRepository), typeof(AuthRepository));
 //Services Setup
 
 builder.Services.AddScoped(typeof(AuthService), typeof(AuthService));
+
 
 
 var app = builder.Build();
