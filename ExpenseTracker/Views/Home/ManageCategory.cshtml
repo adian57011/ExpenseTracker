@@ -1,4 +1,4 @@
-﻿@model ExpenseTracker.Models.Category
+﻿@model ExpenseTracker.Models.CategoryViewModel
 
 <div class="clearfix"></div>
 
@@ -57,7 +57,7 @@
             url: '/Home/SaveCategory',
             type: 'POST',
             dataType: 'json',
-            data: JSON.stringify({ categoryName: categoryName }),
+            data: JSON.stringify({ CategoryName: categoryName }),
             contentType: 'application/json; charset=UTF-8',
             beforeSend: function () {
                 showloader();
@@ -76,6 +76,35 @@
             complete: function () {
                 hideloader();
             }
+        });
+    }
+
+    function PopulateTable()
+    {
+        $.ajax({
+            url:"/Home/LoadCategory",
+            type: "POST",
+            dataType:"json",
+            contentType:"application/json;charset=UTF-8",
+            beforeSend:function(){
+                showloader();
+            };
+            success: function (response) { 
+                if(response)
+                {
+
+                }
+                else
+                {
+                    swal("Error", "No Response Founde", "error");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Error: ",error);
+            },
+            complete: function(){
+                hideloader();
+            };
         });
     }
 

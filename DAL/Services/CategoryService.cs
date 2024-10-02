@@ -12,7 +12,7 @@ namespace DAL.Services
             _category = category;
         }
 
-        public async Task<IEnumerable<Category>> GetCategory()
+        public async Task<IList<Category>> GetCategory()
         {
             try
             {

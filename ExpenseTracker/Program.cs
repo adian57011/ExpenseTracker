@@ -29,7 +29,7 @@ builder.Services.AddScoped(typeof(IAuthRepository), typeof(AuthRepository));
 //Services Setup
 
 builder.Services.AddScoped(typeof(AuthService), typeof(AuthService));
-
+builder.Services.AddScoped(typeof(CategoryService), typeof(CategoryService));
 
 
 var app = builder.Build();

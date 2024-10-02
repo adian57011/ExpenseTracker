@@ -32,7 +32,7 @@ namespace DAL.Repository
             return false;
         }
 
-        public async Task<IEnumerable<T>> Get()
+        public async Task<IList<T>> Get()
         {
             return await _dbset.AsNoTracking().ToListAsync();
         }
